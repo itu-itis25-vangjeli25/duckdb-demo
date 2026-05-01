@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  duckdb-demo:
+    build: .
+    container_name: duckdb-demo
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
